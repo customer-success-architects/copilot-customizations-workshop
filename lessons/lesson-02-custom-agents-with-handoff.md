@@ -1,4 +1,6 @@
-# Lesson 2 — Custom Agents with Handoff (~20 min)
+# Lesson 2 — Custom Agents with Handoff (~32 min)
+
+> **Part 1: Shape Your Copilot** — Build and use a guided agent workflow, then adapt one agent to a workflow your team could use.
 
 ## Goal
 
@@ -222,6 +224,42 @@ Submit. Watch Feature Builder add the counter, then hand off to Tester, who cove
 
 ---
 
+## Phase 2D — Inspect and adapt an agent (~7 min)
+
+The important skill is not copying an agent definition; it is knowing how to shape one for your team's workflow.
+
+### Step 2.10 — Inspect the control points
+
+Open `.github/agents/feature-builder.agent.md` and identify these three controls:
+
+1. **`description`** decides when the agent is a useful choice.
+2. **`tools`** limits what the agent can do.
+3. **`handoffs`** defines the next review point and carries context forward.
+
+Change one sentence in the agent body to reflect a real convention from your team. Examples:
+
+- Require an accessibility check before handoff.
+- Require a linked issue or acceptance criteria before implementation.
+- Require the implementation summary to list changed files.
+
+Keep the change small and specific. Save the file, start a new chat, select **Feature Builder**, and ask:
+
+```
+Summarize your definition of done before making any edits.
+```
+
+Confirm the response reflects your change. Then revert your experimental wording if you do not want to keep it.
+
+### Part 1 recap
+
+- **Instructions** are always-on project rules.
+- **Agents** are specialized working modes with bounded tools.
+- **Handoffs** connect those modes with explicit review points.
+
+Part 2 starts from the completed Lesson 2 snapshot, so your tests and persistence become the foundation for skills and hooks.
+
+---
+
 ## Self-check
 
 - [ ] `.github/agents/feature-builder.agent.md` exists with frontmatter
@@ -232,8 +270,9 @@ Submit. Watch Feature Builder add the counter, then hand off to Tester, who cove
 - [ ] `node --test` shows all tests passing
 - [ ] Tasks persist across browser refresh
 - [ ] You clicked at least one handoff button
+- [ ] You inspected and adapted one agent control point
 
-If everything is checked, onward to [Lesson 3 →](lesson-03-skills.md).
+If everything is checked, Part 1 is complete. Continue with [Part 2: Lesson 3 →](lesson-03-skills.md) now or in a separate session.
 
 ## Common pitfalls
 
@@ -269,4 +308,4 @@ You are a read-only planning agent. Your output is a numbered implementation pla
 
 ## Recap
 
-You created two custom agents and watched a real handoff connect them. The next lesson introduces a third type of customization — **skills** — which are how you teach Copilot a *recipe* it can pull off the shelf when needed, instead of always-on rules or always-on personas.
+You created two custom agents, watched a real handoff connect them, and adapted an agent definition to a team convention. Part 2 introduces **skills** — how you teach Copilot a *recipe* it can pull off the shelf when needed — followed by hooks for deterministic automation.

@@ -1,4 +1,6 @@
-# Lesson 1 — `copilot-instructions.md` (~15 min)
+# Lesson 1 — `copilot-instructions.md` (~20 min)
+
+> **Part 1: Shape Your Copilot** — This lesson establishes the always-on project rules that the custom agents in Lesson 2 will inherit.
 
 ## Goal
 
@@ -12,7 +14,7 @@ You've probably found yourself adding the same instructions to every prompt: *"u
 
 ---
 
-## Phase 1A — Baseline without instructions (~5 min)
+## Phase 1A — Baseline without instructions (~7 min)
 
 ### Step 1.1 — Confirm the workspace is empty (except for the workshop docs)
 
@@ -77,7 +79,7 @@ Confirm with `ls -la` — you should see only `README.md`, `setup.md`, `lessons/
 
 ---
 
-## Phase 1B — Add `copilot-instructions.md` and regenerate (~10 min)
+## Phase 1B — Add `copilot-instructions.md` and regenerate (~13 min)
 
 ### Step 1.7 — Create the `.github/` folder
 

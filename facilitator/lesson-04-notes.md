@@ -38,6 +38,8 @@ Three callouts:
 
 > *"In a real workflow, this is your safety net. Copilot suggests something subtle, your tests catch it, you revert in one prompt. Compare to: ship the change → user reports bug → reproduce → debug → fix. Hooks compress that loop to seconds."*
 
+Do not move on until the room sees the restored green test run. The failure-and-recovery pair is the troubleshooting exercise, not an optional demo.
+
 ---
 
 ## Phase 4C — "When *not* to use a hook"
@@ -52,3 +54,15 @@ Rule of thumb:
 
 - Use **non-blocking hooks** (`|| true`) for **observability**: tests, formatters, linters, audit logs.
 - Use **blocking hooks** (exit code 2) for **policy**: dangerous command bans, secret scanning, license checks.
+
+---
+
+## Team customization challenge
+
+Give attendees seven minutes and require one small change to either the skill or hook. During the share-out, ask:
+
+- What activates it?
+- Does it guide the model or enforce an action?
+- Where can a teammate observe that it ran?
+
+Use those answers to lead directly into the four-layer closing recap in `FACILITATOR.md`.

@@ -14,7 +14,7 @@ Everything in this folder is for the **person running the workshop**, not for at
 
 ## How to use
 
-1. Read [`FACILITATOR.md`](FACILITATOR.md) once before the breakout.
+1. Read [`FACILITATOR.md`](FACILITATOR.md) once before running either session.
 2. During each lesson, keep the matching `lesson-XX-notes.md` open in a side pane next to the lesson markdown the attendees are working through. Each note is anchored to a specific step in the lesson so you know exactly when to deliver it.
 
 ## Distributing the repo to customers

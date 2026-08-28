@@ -1,4 +1,6 @@
-# Lesson 3 — Skills (~13 min)
+# Lesson 3 — Skills (~20 min)
+
+> **Part 2: Scale Your Copilot** — You can begin here independently by restoring the completed Part 1 snapshot below.
 
 ## Goal
 
@@ -25,7 +27,13 @@ Copilot reads only the `name` and `description` of every skill at session start 
 
 ### Starting state
 
-You finished lesson 2 with persistence and tests. Verify:
+If this is a new session, restore the completed Part 1 state first:
+
+```bash
+cp -R solutions/lesson-02-final/. .
+```
+
+This safely gives everyone the same app, agents, persistence, and tests. Start a **new Copilot Chat session** after restoring the snapshot so its customizations are detected. Then verify:
 
 ```bash
 ls -la .github/agents
@@ -33,7 +41,7 @@ ls .github/copilot-instructions.md
 node --test 2>&1 | tail -3
 ```
 
-If anything's missing, recover:
+If you are continuing directly from Part 1 and anything is missing, recover with the same snapshot command:
 
 ```bash
 cp -R solutions/lesson-02-final/. .
@@ -136,7 +144,7 @@ If it doesn't appear:
 
 ---
 
-## Phase 3B — Use the skill to add a filter (~7 min)
+## Phase 3B — Use the skill to add a filter (~12 min)
 
 ### Step 3.4 — Switch back to the default Agent (not your custom agents)
 
@@ -190,7 +198,7 @@ Open the URL shown in the terminal (usually **http://localhost:3000**):
 
 Press **Ctrl+C** to stop the server when done.
 
-### Step 3.8 — Try explicit invocation
+### Step 3.8 — Compare explicit invocation
 
 Even though the skill auto-loaded above, you can also call it explicitly. In a new chat:
 
@@ -199,6 +207,11 @@ Even though the skill auto-loaded above, you can also call it explicitly. In a n
 ```
 
 The skill body is loaded immediately (no auto-discovery delay), and Copilot follows the same recipe for the Clear Completed button. Approve the changes; tests should still pass.
+
+Compare this run with Step 3.5:
+
+- **Auto-discovery** keeps prompts natural and relies on a precise skill description.
+- **Explicit invocation** is useful when you need a particular recipe to run predictably.
 
 ---
 

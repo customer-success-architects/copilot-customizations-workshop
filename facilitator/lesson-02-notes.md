@@ -49,3 +49,13 @@ Before moving on, ask the room:
   1. **Tool restrictions are scoped.** The Tester literally cannot edit `index.html`. Mistakes are bounded.
   2. **Review at handoff.** You see the implementation before tests are written. If something looks wrong, you fix it before tests cement the wrong behavior.
   3. **Agents are reusable.** Tomorrow you can run Feature Builder against any new feature. Today's flow is repeatable.
+
+---
+
+## Phase 2D — adapting an agent
+
+Ask attendees to point to the exact control they changed: `description`, `tools`, `handoffs`, or an instruction in the body. Reinforce that useful custom agents encode a narrow job and a visible definition of done; they are not merely longer prompts.
+
+Close Part 1 with:
+
+> *"Instructions gave us shared rules. Agents gave us specialized roles, bounded tools, and review points. Part 2 turns this workflow into reusable recipes and deterministic automation."*

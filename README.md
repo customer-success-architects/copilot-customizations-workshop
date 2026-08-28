@@ -1,10 +1,18 @@
-# GitHub Copilot Customizations — 60-Minute Breakout
+# GitHub Copilot Customizations — Two-Part Workshop
 
-Build a working to-do app from an empty folder while learning **how to customize GitHub Copilot** for your team. Every step has copy-paste prompts, expected output, and a self-check.
+Build a working to-do app across two hands-on, 60-minute sessions while learning **how to customize GitHub Copilot** for your team. Every step has copy-paste prompts, expected output, and a self-check. You can attend the sessions in sequence or start Part 2 from its provided recovery snapshot.
+
+## Part 1 — Shape Your Copilot
+
+Build a to-do app while teaching Copilot your team's conventions. Create repository instructions, design specialized agents, and connect them with handoffs. Finish by adapting an agent to your own workflow.
+
+## Part 2 — Scale Your Copilot
+
+Start from the completed Part 1 app and turn development patterns into reusable skills. Add automated quality checks with hooks, troubleshoot a failing automation, and create a customization your team can reuse.
 
 ## What you will learn
 
-By the end of 60 minutes you will have used and *understood* four core Copilot customizations:
+By the end of both sessions you will have used and *understood* four core Copilot customizations:
 
 1. **`.github/copilot-instructions.md`** — repo-wide rules that apply to every chat request.
 2. **Custom agents with handoff** (`.github/agents/*.agent.md`) — specialized personas that pass control between each other.
@@ -17,17 +25,38 @@ If you finish early, the bonus lessons cover **Copilot CLI**, prompt files + hoo
 
 You should already be comfortable using Copilot Chat in agent mode. You do **not** need prior experience with any customization features.
 
-Before the breakout, complete [`setup.md`](setup.md). It takes ~5 minutes.
+Before your first session, complete [`setup.md`](setup.md). It takes ~5 minutes.
 
-## Agenda (60 minutes)
+## Part 1 agenda (60 minutes)
 
 | Time | Lesson | Customization | Outcome |
 | --- | --- | --- | --- |
-| 0–5 | Setup check | — | Workspace open, Copilot responding, Node available |
-| 5–20 | [Lesson 1](lessons/lesson-01-copilot-instructions.md) | `copilot-instructions.md` | Baseline app generated twice — once unguided, once guided |
-| 20–40 | [Lesson 2](lessons/lesson-02-custom-agents-with-handoff.md) | Custom agents + handoff | Two agents add `localStorage` and tests via explicit handoff |
-| 40–53 | [Lesson 3](lessons/lesson-03-skills.md) | Skill | Filter feature added by invoking a skill |
-| 53–60 | [Lesson 4](lessons/lesson-04-hooks.md) | Hook | Tests run automatically after every Copilot edit |
+| 0–5 | Welcome + setup check | — | Workspace open, Copilot responding, Node available |
+| 5–25 | [Lesson 1](lessons/lesson-01-copilot-instructions.md) | `copilot-instructions.md` | Baseline app generated twice: once unguided, once guided |
+| 25–50 | [Lesson 2](lessons/lesson-02-custom-agents-with-handoff.md) | Custom agents + handoff | Two agents add `localStorage` and tests via explicit handoff |
+| 50–57 | Customize an agent | Custom agent | Inspect and adapt an agent definition for a team workflow |
+| 57–60 | Recap | Instructions + agents | Connect always-on rules to specialized, guided workflows |
+
+## Part 2 agenda (60 minutes)
+
+| Time | Lesson | Customization | Outcome |
+| --- | --- | --- | --- |
+| 0–8 | Welcome, recap + recovery | — | Restore the completed Part 1 app and verify its tests |
+| 8–28 | [Lesson 3](lessons/lesson-03-skills.md) | Skill | Create a reusable feature recipe and use it to add filtering |
+| 28–50 | [Lesson 4](lessons/lesson-04-hooks.md) | Hook | Run tests automatically, expose a regression, and recover |
+| 50–57 | Team customization challenge | Skill or hook | Adapt one artifact to a real team workflow |
+| 57–60 | Final recap | All four layers | Choose the right customization for a given need |
+
+### Starting Part 2 independently
+
+From the repository root, restore the completed Part 1 state and verify it before opening Lesson 3:
+
+```bash
+cp -R solutions/lesson-02-final/. .
+node --test
+```
+
+Then start a **new Copilot Chat session** so the restored customizations are detected.
 
 ## Bonus / advanced (untimed, for early finishers)
 
@@ -69,7 +98,7 @@ You will create files at the **root** of this repo (`index.html`, `styles.css`, 
 Each lesson has a recovery snapshot in `solutions/`. From the repo root:
 
 ```bash
-# Recover to end-of-lesson-2 state (replace 02 with whichever lesson)
+# Recover to an end-of-lesson state (replace 02 with whichever lesson)
 cp -R solutions/lesson-02-final/. .
 ```
 

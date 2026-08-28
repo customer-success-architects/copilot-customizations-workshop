@@ -4,6 +4,12 @@ Use these alongside [`../lessons/lesson-03-skills.md`](../lessons/lesson-03-skil
 
 ---
 
+## Before the lesson — normalize the starting state
+
+Have everyone restore `solutions/lesson-02-final`, run `node --test`, and start a new chat. Treat this as required even when the same group attended Part 1; a shared baseline is worth the few minutes.
+
+---
+
 ## After the comparison table in "Why this customization exists"
 
 Read the comparison table aloud — this is the slide. Skills are the customization most teams have never heard of, so spend an extra 30 seconds here.
@@ -32,3 +38,5 @@ Pause here.
 ## After Step 3.8 — explicit invocation via `/add-todo-feature`
 
 > *"Instructions are 'always loaded.' Skills are 'loaded when needed.' That's the whole mental model. Use skills for procedures, instructions for rules."*
+
+Ask for one observation about auto-discovery versus explicit invocation. The intended distinction is natural prompting versus predictable selection of a known recipe.

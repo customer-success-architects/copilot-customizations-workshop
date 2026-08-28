@@ -1,4 +1,6 @@
-# Lesson 4 — Hooks (~10 min)
+# Lesson 4 — Hooks (~22 min)
+
+> **Part 2: Scale Your Copilot** — Add deterministic feedback, deliberately expose a regression, and recover before adapting an artifact for your team.
 
 ## Goal
 
@@ -46,7 +48,7 @@ cp -R solutions/lesson-03-final/. .
 
 ---
 
-## Phase 4A — Create the hook (~3 min)
+## Phase 4A — Create the hook (~5 min)
 
 ### Step 4.1 — Create the hooks folder
 
@@ -95,7 +97,7 @@ Keep this panel visible. This is where every hook execution will be logged.
 
 ---
 
-## Phase 4B — Trigger the hook (~5 min)
+## Phase 4B — Trigger and troubleshoot the hook (~12 min)
 
 ### Step 4.5 — Make a small edit via Copilot
 
@@ -166,7 +168,7 @@ The Hooks output channel should stay quiet. No tool was invoked, so `PostToolUse
 
 ---
 
-## Phase 4C — When *not* to use a hook (~2 min)
+## Phase 4C — When *not* to use a hook (~5 min)
 
 What goes wrong if we made the hook block on test failure (exit code 2 instead of `|| true`)?
 
@@ -187,7 +189,22 @@ Rule of thumb:
 - [ ] The deliberate-failure step showed a red test in the hook output
 - [ ] After revert, tests went back to green
 
-If everything is checked — congratulations, you've finished the core 60-minute workshop. You now have hands-on experience with all four primary Copilot customization layers.
+If everything is checked, you've finished both parts of the workshop. You now have hands-on experience with all four primary Copilot customization layers.
+
+## Team customization challenge (~7 min)
+
+Choose **one** artifact and adapt it to a workflow your team actually uses:
+
+- **Skill:** Change the `add-todo-feature` description or recipe to require one meaningful team practice, such as accessibility acceptance criteria or a security review.
+- **Hook:** Narrow the test command to `node --test state.test.js`, or add a non-blocking formatter or linter command already available in your project.
+
+Start a new chat and trigger your customization. Be ready to explain:
+
+1. What event or request activates it?
+2. Is it guidance or deterministic enforcement?
+3. How will a teammate know that it ran?
+
+Keep the change if it improves this workshop project; otherwise revert only your experimental wording or command.
 
 ## Common pitfalls
 
